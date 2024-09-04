@@ -1,0 +1,15 @@
+ {% when 'custom-upsell' %}
+{% liquid
+  assign custom_upsell_background = block.settings.background_color
+  assign customer_upsell_text_color = block.settings.text_color
+  assign custom_upsell = block.settings.product_upsell
+  assign custom_upsell_header = block.settings.upsell_header
+  assign custom_upsell_text = block.settings.upsell_text
+  assign custom_upsell_cta = block.settings.cta_text
+  assign bottom_spacing = block.settings.padding_bottom
+
+  if custom_upsell != blank
+    assign product-offer = all_products[custom_upsell]
+    render 'custom-upsell', headline: custom_upsell_header, description: custom_upsell_text, product: product-offer, cta: custom_upsell_cta, background_color: custom_upsell_background, text_color: customer_upsell_text_color, bottom_spacing: bottom_spacing
+  endif
+%}

@@ -1,0 +1,59 @@
+{
+      "type": "custom-upsell",
+      "name": "Custom Upsell",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Use Upsell Offer Dynamically via metaobject Upsell"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#CF202F"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "product",
+          "id": "product_upsell",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "upsell_header",
+          "label": "Header",
+          "default": "Insert your headline"
+        },
+        {
+          "type": "text",
+          "id": "upsell_text",
+          "label": "Description",
+          "default": "insert your description"
+        },
+        {
+         "type": "text",
+         "id": "cta_text",
+         "label": "CTA",
+         "default": "Add to Cart"
+        },
+        {
+          "type": "header",
+          "content": "Block spacing"
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 50,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding bottom",
+          "default": 20
+        }
+      ]
+    },

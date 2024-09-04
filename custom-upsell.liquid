@@ -1,0 +1,58 @@
+{% assign product_image = product.images | first %}
+{% assign variant_id = product.first_available_variant.id %}
+
+<div class="upsell">
+    <div class="upsell-image-text">
+        <img src="{{product_image |  image_url: width: 120 }}" class="desktop_bob_img" alt="Desktop Bob"/> 
+        <div class="upsell-text">
+            <span class="upsell-headline">{{headline}}</span>
+            <span class="upsell-description">{{description}}</span>
+            <a href="/cart/add?id={{variant_id}}" id="upsell-cta" class="btn btn--solid btn--small btn--white" style="margin-top: 5px; line-height: 1em;" data-handle="{{ product.handle }}" data-button-quick-view>{{cta}}</a> 
+        </div>  
+    </div>
+</div>
+
+  <style>
+    .upsell {
+        background-color: {{background_color}};
+        padding: 15px 18px;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: {{bottom_spacing}}px;
+    }
+
+    .upsell-image-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjust as needed */
+    }
+
+    .upsell-text {
+        margin-left: 15px;
+    }
+
+    .upsell-headline {
+        text-transform: uppercase;
+        color: {{text_color}};
+        display: block;
+        font-weight: 700;
+        font-size: 1.4em;
+        line-height: 1.2em;;
+    }
+    .upsell-description {
+        color: {{text_color}};
+        font-size: .8em;
+        display: block;
+      
+    }
+
+    .desktop_bob_img {
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .claim-btn {
+      margin-left:5px;
+    }
+  </style>
